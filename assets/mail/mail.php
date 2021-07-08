@@ -1,22 +1,19 @@
 <?php
 //get data from form  
-    $name = $_POST['name'];
-    $email= $_POST['email'];
-    $message= $_POST['message'];
+$name = $_POST['name'];
+$email= $_POST['email'];
+$message= $_POST['message'];
 
-    $email_from='noreply@beabhi.in';
+$to = "meramailid2@mail.com";
 
-    $email_subject = "New Message from Website";
+$subject = "Message From website";
+$txt ="Name = ". $name . "\r\n  Email = " . $email . "\r\n Message =" . $message;
 
-    $email_body = "Name: $name.\n"."Email: $email.\n". "Message: $message.\n";
-
-    $to ="meramailid2@gmail.com";
-
-    $headers="From : $email_from \r\n";
-
-    $headers .= "Reply-To: $email \r\n";
-    mail($to,$email_subject,$email_body,$headers);
-
-    header("Location: index.html")
-
+$headers = "From: noreply@Abhishek" . "\r\n" .
+"CC: somebodyelse@example.com";
+if($email!=NULL){
+    mail($to,$subject,$txt,$headers);
+}
+//redirect
+header("Location:thankyou.html");
 ?>
