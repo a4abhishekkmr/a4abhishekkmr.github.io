@@ -8,7 +8,7 @@
 
         <!-- =====BOX ICONS===== -->
         <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-
+        
         <title>Abhishek Kumar</title>
     </head>
     <body>
@@ -16,7 +16,7 @@
         <header class="l-header">
             <nav class="nav bd-grid">
                 <div>
-                    <a href="#" class="nav__logo">Abhishek</a>
+                    <a href="#home" class="nav__logo">Abhishek</a>
                 </div>
 
                 <div class="nav__menu" id="nav-menu">
@@ -227,10 +227,11 @@
                 <h2 class="section-title">Contact</h2>
 
                 <div class="contact__container bd-grid">
-                    <form action="assets/mail/mail.php" class="contact__form" method="post">
-                        <input type="text" name="name" placeholder="Name" class="contact__input">
-                        <input type="email" name="email" placeholder="Email" class="contact__input">
+                    <form action="https://formsubmit.co/meramailid2@gmail.com" class="contact__form" method="POST">
+                        <input type="text" name="name" placeholder="Name" class="contact__input" required>
+                        <input type="email" name="email" placeholder="Email" class="contact__input" required>
                         <textarea placeholder="..." name="message" cols="0" rows="7" class="contact__input"></textarea>
+                        <input type="hidden" name="_next" value="https://github.com/a4abhishekkmr/a4abhishekkmr.github.io/blob/main/assets/mail/thankyou.html">
                         <input type="submit" value="Send" class="contact__button button">
                     </form>
                 </div>
